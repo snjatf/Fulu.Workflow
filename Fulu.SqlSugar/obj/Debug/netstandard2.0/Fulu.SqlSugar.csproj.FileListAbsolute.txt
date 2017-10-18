@@ -1,0 +1,9 @@
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\bin\Debug\netstandard2.0\Fulu.SqlSugar.deps.json
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\bin\Debug\netstandard2.0\Fulu.SqlSugar.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\bin\Debug\netstandard2.0\Fulu.SqlSugar.pdb
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.csprojResolveAssemblyReference.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.csproj.CoreCompileInputs.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.AssemblyInfoInputs.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.AssemblyInfo.cs
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\Fulu.SqlSugar\obj\Debug\netstandard2.0\Fulu.SqlSugar.pdb

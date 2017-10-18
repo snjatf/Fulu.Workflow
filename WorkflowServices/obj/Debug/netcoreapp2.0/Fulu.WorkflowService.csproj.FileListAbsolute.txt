@@ -1,0 +1,15 @@
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Fulu.WorkflowService.deps.json
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Fulu.WorkflowService.runtimeconfig.json
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Fulu.WorkflowService.runtimeconfig.dev.json
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Fulu.WorkflowService.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Fulu.WorkflowService.pdb
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.csprojResolveAssemblyReference.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.csproj.CoreCompileInputs.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.AssemblyInfoInputs.cache
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.AssemblyInfo.cs
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\obj\Debug\netcoreapp2.0\Fulu.WorkflowService.pdb
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\SqlSugar.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Workflow.Data.Sugar.dll
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\Workflow.Data.Sugar.pdb
+E:\01.福禄-工作流\01.Code\01.工作流引擎服务\WorkflowServices\WorkflowServices\bin\Debug\netcoreapp2.0\SqlSugar.pdb

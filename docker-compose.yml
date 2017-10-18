@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  workflowservices:
+    image: workflowservices
+    build:
+      context: ./WorkflowServices
+      dockerfile: Dockerfile
