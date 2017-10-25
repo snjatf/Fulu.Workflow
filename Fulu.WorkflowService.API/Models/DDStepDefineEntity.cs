@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Fulu.WorkflowService.API.Models
+{
+    public class DDStepDefineEntity
+    {
+        /// <summary>
+        ///     标题
+        /// </summary>
+        public string Title { get; set; }
+        public int InitNum { get; set; }        
+        public List<Node> Nodes { get; set; }
+        public List<StepArea> Areas { get; set; }
+        public List<Line> Lines { get; set; }
+    }
+
+    public class StepArea {
+
+    }
+    public class Node {
+        public string Id { get; set; }
+        public bool Alt { get; set; }
+        public int Height { get; set; }
+        public int Left { get; set; }
+        public string Name { get; set; }
+
+        public int Top { get; set; }
+        public string Type { get; set; }
+        public int Width { get; set; }
+    }
+
+    public class Line {
+        public string From { get; set; }
+        public string Name { get; set; }
+        public string To { get; set; }
+        public string Type { get; set; }
+    }
+}

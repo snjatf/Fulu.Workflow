@@ -11,7 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/FormDesign/a72aab5e-2453-474e-9566-a08760dc1e11",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -19,7 +19,7 @@
     "WorkflowServices": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/FormDesign/a72aab5e-2453-474e-9566-a08760dc1e11",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
