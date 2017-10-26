@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using Fulu.WorkflowService.API.Models;
 using WorkflowServices.Helper;
+using Newtonsoft.Json;
+using ICH.Data.Sugar;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Fulu.WorkflowService.API.Controllers
 {
-    [Produces("application/json")]
     [Route("api/ProcessDesign")]
     [EnableCors("any")]
     public class ProcessDesignController : Controller
@@ -23,34 +24,32 @@ namespace Fulu.WorkflowService.API.Controllers
             var defualtStepEntity = new DDStepDefineEntity() {
                 Title = "工作流流程设计器" + Math.Round(0.00, 15).ToString(),
                 InitNum = 2,
-                Nodes = new List<Node>() {
-                    new Node(){
-                        Id="000000000000",
-                        Alt=true,
-                        Name ="开始",
+                StepModuleList = new List<DDStepModuleDefineEntity>() {
+                    new DDStepModuleDefineEntity(){
+                        StepId="000000000000",                        
+                        StepName ="开始",
                         Height=28,
                         Left=42,
                         Top=38,
                         Width=28,
-                        Type="startround"
+                        StepType="startround"
                     },
-                    new Node(){
-                        Id="111111111111",
-                        Alt=true,
-                        Name ="归档",
+                    new DDStepModuleDefineEntity(){
+                        StepId="111111111111",
+                        StepName ="归档",
                         Height=28,
                         Left=797,
                         Top=42,
                         Width=28,
-                        Type="endround"
+                        StepType="endround"
                     }
                 },
-                Lines = new List<Line>() {
-                    new Line(){                        
-                        From="000000000000",
-                        Name="直接归档",
-                        To="111111111111",
-                        Type="sl",
+                StepRelationModuleList = new List<DDStepRelationModuleDefineEntity>() {
+                    new DDStepRelationModuleDefineEntity(){
+                        StepDefinitionGuid="000000000000",
+                        NextStepDefinitionGuid="111111111111",
+                        LineName="直接归档",
+                        LineDisplayType="sl"
                     }
                 }
             };
@@ -68,9 +67,36 @@ namespace Fulu.WorkflowService.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]DDStepDefineEntity processInfo)
+        public object Post([FromBody]DDStepDefineEntity ProcessInfo)
         {
-            var x = processInfo;
+            var db = SqlSugarFactory.GetInstance();
+            var processDefineGuid = Guid.NewGuid().ToString();
+            ProcessInfo.StepModuleList.ForEach(item =>
+            {
+                item.StepDefinitionGuid= Guid.NewGuid().ToString();
+                item.ProcessDefinitionGuid = processDefineGuid;
+            });
+            ProcessInfo.StepRelationModuleList.ForEach(item=>
+            {
+                item.RelationDefinitionGuid = Guid.NewGuid().ToString();
+                item.ProcessDefinitionGuid = processDefineGuid;
+            });
+            db.Ado.BeginTran();
+            try
+            {
+                var count1 = db.Insertable(ProcessInfo.StepModuleList).ExecuteCommand();
+                var count2 = db.Insertable(ProcessInfo.StepRelationModuleList).ExecuteCommand();
+                db.Ado.CommitTran();
+            }
+            catch (Exception ex)
+            {
+                db.Ado.RollbackTran();
+                return new ResponseError(ex.StackTrace,ResultCode.ApiManagerNetworkError);
+            }
+            
+            //SqlSugarFactory.GetInstance().Insertable(entity).ExecuteReturnEntity()
+            //var y=JsonConvert.DeserializeObject<DDStepDefineEntity>(x);
+            return new ResponseSucess();
         }
 
         // PUT api/values/5

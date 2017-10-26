@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,10 +12,12 @@ namespace Fulu.WorkflowService.API.Models
         ///     标题
         /// </summary>
         public string Title { get; set; }
-        public int InitNum { get; set; }        
-        public List<Node> Nodes { get; set; }
+        public int InitNum { get; set; }
+        [JsonProperty(PropertyName ="nodes")]
+        public List<DDStepModuleDefineEntity> StepModuleList { get; set; }
         public List<StepArea> Areas { get; set; }
-        public List<Line> Lines { get; set; }
+        [JsonProperty(PropertyName = "lines")]
+        public List<DDStepRelationModuleDefineEntity> StepRelationModuleList { get; set; }
     }
 
     public class StepArea {
